@@ -1,0 +1,203 @@
+body {
+	font-family: 'Baloo Da 2', cursive;
+	height: 100%;
+}
+
+input {
+	font-family: 'Baloo Da 2', cursive;
+}
+
+nav {
+	display: flex;
+	width: 90%;
+	height: 10vh;
+	margin: auto;
+	align-items: center;
+}
+
+.logo, .nav-links, .cart {
+	display: flex;
+}
+
+.logo {
+	flex: 1;
+}
+
+.logo > h4 {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.navigation {
+	flex: 2;
+}
+
+.nav-links {
+	list-style: none;
+	justify-content: space-around;
+}
+
+.nav-links > li {
+	color: grey;
+	cursor: pointer;
+	font-size: 20px;
+	transition: color 1s;
+}
+
+.nav-links > li:hover {
+	color: green;
+}
+
+.cart {
+	flex: 1;
+	justify-content: flex-end;
+}
+
+.cart > img {
+	cursor: pointer;
+}
+
+.main {
+	display: flex;
+	margin-top: 60px;
+}
+
+.main-text {
+	flex: 1;
+	padding: 110px 0 0 100px;
+}
+
+.main-text > h1 {
+	font-weight: 500;
+	color: rgb(163, 78, 194);
+}
+
+.main-text > p {
+	color: rgb(163, 78, 194);
+	margin-bottom: 50px;
+}
+
+.inch {
+	border: 2px solid rgb(157, 0, 214);
+	background: transparent;
+	color: rgb(157, 0, 214);
+	height: 50px;
+	width: 125px;
+	margin-right: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	outline: none;
+}
+
+.add-cart {
+	border: none;
+	background: rgb(157, 0, 214);
+	color: white;
+	height: 50px;
+	width: 125px;
+	margin-right: 20px;
+	cursor: pointer;
+	font-size: 15px;
+	outline: none;
+}
+
+.matebook {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	filter: drop-shadow(0 3px 5px black);
+	height: 500px;
+}
+
+.matebook > img {
+	height: 100%;
+	padding-right: 100px;
+	animation: drop 2s ease;
+}
+
+.icon-bar {
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	right: 20%;
+}
+
+.icon-bar > img {
+	cursor: pointer;
+}
+
+.big-circle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	opacity: 0.5;
+	height: 80%;
+}
+
+.mid-circle {
+	position: absolute;
+	right: 30%;
+	top: 15%;
+	z-index: -1;
+	opacity: 0.6;
+}
+
+.small-circle {
+	position: absolute;
+	bottom: 0;
+	left: 15%;
+	z-index: -1;
+	opacity: 0.7;
+}
+
+@keyframes drop {
+
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width: 1035px) {
+
+	.main {
+		flex-direction: column;
+	}
+
+	.main > .main-text {
+		padding-top: 0;
+		text-align: center;
+		padding-left: 0;
+	}
+
+	.main-text > h1 {
+		font-size: 30px;
+	}
+
+	.main-text > p {
+		font-size: 18px;
+	}
+
+	.main-text > input {
+		padding-top: 10px;
+	}
+
+	.matebook > img {
+		padding-right: 0;
+		height: 80%;
+	}
+
+	.icon-bar {
+		left: 42%;
+		padding-bottom: 15px;
+	}
+
+}
+
